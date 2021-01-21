@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-//run tests on requests from nakdan run
+//run tests on requests from transliterate run
 
 describe('requestsTests',()=>{
 
