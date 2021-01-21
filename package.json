@@ -1,0 +1,25 @@
+{
+  "name": "dicta-transliterate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "npm run runChrome & npm run runFirefox",
+    "cy:runSpec": "npm run runChrome -- --spec %npm_config_spec% & npm run runFirefox -- --spec %npm_config_spec%",
+    "runChrome": "cypress run --browser chrome  --record --key de47995c-194f-49fa-91c7-8d56eec4221a",
+    "runFirefox": "cypress run --browser firefox  --record --key de47995c-194f-49fa-91c7-8d56eec4221a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShlomoBluth/dicta-transliterate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShlomoBluth/dicta-transliterate/issues"
+  },
+  "homepage": "https://github.com/ShlomoBluth/dicta-transliterate#readme",
+  "devDependencies": {
+    "cypress": "^6.3.0"
+  }
+}
