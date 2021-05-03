@@ -1,5 +1,10 @@
 {
     "projectId": "eh218b",
     "screenshotOnRunFailure": false,
-    "defaultCommandTimeout": 10000
+    "defaultCommandTimeout": 10000,
+    "baseUrl":"https://transliterate.dicta.org.il/",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
 }
