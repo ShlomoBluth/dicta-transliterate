@@ -40,7 +40,7 @@ jobs:
 
     - name: Run firefox requests tests
       run: xvfb-run -s '-screen 0 1280x800x24' npx cypress run --browser firefox --spec ./cypress/integration/requestsTests.js
-      if: ${{env.REQUESTS_TESTS == 'true'}}
+      if: ${{always() && (env.REQUESTS_TESTS == 'true')}}
 
     - name: Copy test execution videos 
       run: |
