@@ -3,7 +3,6 @@
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 10000,
     "baseUrl":"https://transliterate.dicta.org.il/",
-    "failOnStatusCode": false,
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "configFile": "dicta-shared/reporter-config.json"
