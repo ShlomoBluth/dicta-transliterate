@@ -2,25 +2,33 @@
 
 //run basic tests on transliterate
 
-let sizes = ['iphone-x',[1000, 660]]
+const urls = new Map();
+urls.set('live',Cypress.env('LIVE_URL'))
+//urls.set('dev',Cypress.env('DEV_URL')) 
 
-sizes.forEach((size) => {
+const sizes= new Map();
+sizes.set('desktop',[1000, 660])
+sizes.set('mobile','iphone-x')
 
-    describe('basicTests',()=>{
 
-        before(() => {
-            cy.screenSize({size:size})
-            cy.visitpage({url:'/'})
-        })
-        
+urls.forEach((urlValue,urlKey)=>{
+
+    sizes.forEach((sizeValue,sizeKey) => {
+
     
-        it('transliterateRun',()=>{
-            cy.get('[placeholder="הזן טקסט כאן"]').type('תּוֹרָה')
-            cy.get('[class*="spinner"]').should('not.exist')
-            cy.get('.results-content').should('contain','torah')
-        })
+        describe('toolTests '+urlKey+' '+sizeKey,()=>{
     
-           
+            beforeEach(() => {
+                cy.screenSize({size:sizeValue})
+                cy.visitpage({url:urlValue})
+            })
+            
+            it('transliterateRun',()=>{
+                cy.get('[placeholder="הזן טקסט כאן"]').type('תּוֹרָה')
+                cy.get('[class*="spinner"]').should('not.exist')
+                cy.get('.results-content').should('contain','torah')
+            })
+    
+        })          
     })
-
 })

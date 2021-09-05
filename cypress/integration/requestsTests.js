@@ -2,38 +2,48 @@
 
 //run tests on requests from transliterate run
 
-let sizes = ['iphone-x',[1000, 660]]
+const urls = new Map();
+urls.set('live',Cypress.env('LIVE_URL'))
+//urls.set('dev',Cypress.env('DEV_URL')) 
 
-sizes.forEach((size) => {
+const sizes= new Map();
+sizes.set('desktop',[1000, 660])
+sizes.set('mobile','iphone-x')
 
-  describe('requestsTests',()=>{
+
+urls.forEach((urlValue,urlKey)=>{
+
+  sizes.forEach((sizeValue,sizeKey) => {
+
+
+    describe('requestsTests '+urlKey+' '+sizeKey,()=>{
 
     
-    beforeEach(() => {
-      cy.screenSize({size:size})
-      cy.visitpage({url:'/'})
-    })
-  
-  
-    it('Error message for api response with a delay of 3 minutes when',()=>{
-      cy.transliterateRequest({
-        url:'api',
-        message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',
-        delaySeconds:60*5
+      beforeEach(() => {
+        cy.screenSize({size:sizeValue})
+        cy.visitpage({url:urlValue})
       })
-    })
-  
+
+      it('Error message for api response with a delay of 3 minutes when',()=>{
+        cy.transliterateRequest({
+          url:'api',
+          message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',
+          delaySeconds:60*5
+        })
+      })
     
-  
-    it('Error message for api response with status code 500',()=>{
-      cy.transliterateRequest({
-        url:'api',
-        status:500,
-        message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר'
-      })
-    })
       
+    
+      it('Error message for api response with status code 500',()=>{
+        cy.transliterateRequest({
+          url:'api',
+          status:500,
+          message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר'
+        })
+      })
+  
+  
+    })      
   })
-
 })
 

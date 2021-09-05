@@ -8,6 +8,8 @@
         "configFile": "dicta-shared/reporter-config.json"
     },
     "env":{
+        "DEV_URL":"",
+        "LIVE_URL":"https://transliterate.dicta.org.il/",
         "TOOL_TESTS":false,
         "REQUESTS_TESTS":true,
         "RECORD_KEY":"de47995c-194f-49fa-91c7-8d56eec4221a"
