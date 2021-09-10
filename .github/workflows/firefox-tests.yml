@@ -27,6 +27,7 @@ jobs:
         $(npm bin)/cypress cache path
         $(npm bin)/cypress cache list
         $(npm bin)/cypress verify
+        mkdir public
 
     - name: Set var 
       run: |
@@ -40,7 +41,6 @@ jobs:
 
     - name: Copy test execution videos 
       run: |
-        mkdir public
         cp -r cypress/videos public/videos
       if: ${{ always() && (env.TOOL_TESTS == 'true')}}
 
