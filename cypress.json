@@ -1,6 +1,7 @@
 {
     "projectId": "eh218b",
     "screenshotOnRunFailure": false,
+    "videosFolder": "cypress/videos",
     "defaultCommandTimeout": 10000,
     "baseUrl":"https://transliterate.dicta.org.il/",
     "reporter": "cypress-multi-reporters",
