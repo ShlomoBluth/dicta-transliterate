@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-19T07:44:31.756Z",
+    "end": "2021-09-19T07:54:54.350Z",
+    "duration": 622594,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "efc86ff3-d81e-47d5-a6cc-88636a478ce1",
+      "title": "",
+      "fullFile": "cypress/integration/requestsTests.js",
+      "file": "cypress/integration/requestsTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "480684af-bdc2-411c-bed7-a06e5747a13b",
+          "title": "requestsTests live desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Error message for api response with a delay of 5 minutes when",
+              "fullTitle": "requestsTests live desktop Error message for api response with a delay of 5 minutes when",
+              "timedOut": null,
+              "duration": 309450,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/requestsTests.js.mp4\"",
+              "code": "cy.transliterateRequest({\n  url: 'api',\n  message: 'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',\n  delaySeconds: 60 * 5\n});",
+              "err": {},
+              "uuid": "82d5d66d-9036-4ef8-b73b-2f723403650b",
+              "parentUUID": "480684af-bdc2-411c-bed7-a06e5747a13b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message for api response with status code 500",
+              "fullTitle": "requestsTests live desktop Error message for api response with status code 500",
+              "timedOut": null,
+              "duration": 5562,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/requestsTests.js.mp4\"",
+              "code": "cy.transliterateRequest({\n  url: 'api',\n  status: 500,\n  message: 'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר'\n});",
+              "err": {},
+              "uuid": "4e8cf3f9-5d6b-4892-9af9-a55ebc82953b",
+              "parentUUID": "480684af-bdc2-411c-bed7-a06e5747a13b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82d5d66d-9036-4ef8-b73b-2f723403650b",
+            "4e8cf3f9-5d6b-4892-9af9-a55ebc82953b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 315012,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a07c0693-1257-4a0f-a2f8-787352959d1c",
+          "title": "requestsTests live mobile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Error message for api response with a delay of 5 minutes when",
+              "fullTitle": "requestsTests live mobile Error message for api response with a delay of 5 minutes when",
+              "timedOut": null,
+              "duration": 301640,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/requestsTests.js.mp4\"",
+              "code": "cy.transliterateRequest({\n  url: 'api',\n  message: 'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',\n  delaySeconds: 60 * 5\n});",
+              "err": {},
+              "uuid": "2023fb31-6d7f-4e67-b4b9-93efb2507546",
+              "parentUUID": "a07c0693-1257-4a0f-a2f8-787352959d1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Error message for api response with status code 500",
+              "fullTitle": "requestsTests live mobile Error message for api response with status code 500",
+              "timedOut": null,
+              "duration": 5339,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/requestsTests.js.mp4\"",
+              "code": "cy.transliterateRequest({\n  url: 'api',\n  status: 500,\n  message: 'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר'\n});",
+              "err": {},
+              "uuid": "b0acbf1d-a487-4d05-acab-105b9e559704",
+              "parentUUID": "a07c0693-1257-4a0f-a2f8-787352959d1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2023fb31-6d7f-4e67-b4b9-93efb2507546",
+            "b0acbf1d-a487-4d05-acab-105b9e559704"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 306979,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
