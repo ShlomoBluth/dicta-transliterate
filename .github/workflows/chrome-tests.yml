@@ -56,7 +56,7 @@ jobs:
 
     - name: Merge test results into one
       run: |
-        ls public/videos
+        ls public
         npx mochawesome-merge cypress/results/json/*.json > index.json
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
