@@ -50,6 +50,7 @@ jobs:
 
     - name: Copy test execution videos 
       run: |
+        ls cypress/videos
         cp cypress/videos/* public/videos
       if: ${{ always() && (env.REQUESTS_TESTS == 'true') }}
 
