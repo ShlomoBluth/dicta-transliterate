@@ -55,7 +55,9 @@ jobs:
       if: ${{ always() && (env.REQUESTS_TESTS == 'true') }}
 
     - name: Merge test results into one
-      run: npx mochawesome-merge cypress/results/json/*.json > index.json
+      run: |
+        ls public/videos
+        npx mochawesome-merge cypress/results/json/*.json > index.json
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Generate HTML report
