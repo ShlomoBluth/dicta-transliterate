@@ -24,13 +24,13 @@ urls.forEach((urlValue,urlKey)=>{
         cy.visitpage({url:urlValue})
       })
 
-      it('Error message for api response with a delay of 5 minutes when',()=>{
-        cy.transliterateRequest({
-          url:'api',
-          message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',
-          delaySeconds:60*5
-        })
-      })
+      // it('Error message for api response with a delay of 5 minutes when',()=>{
+      //   cy.transliterateRequest({
+      //     url:'api',
+      //     message:'אופס יש לנו בעיה נסו שנית, או בקרו באתר מאוחר יותר',
+      //     delaySeconds:60*5
+      //   })
+      // })
     
       
     
