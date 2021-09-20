@@ -50,14 +50,11 @@ jobs:
 
     - name: Copy test execution videos 
       run: |
-        ls cypress/videos
-        cp -r cypress/videos/* public/videos
+        cp -r cypress/videos public/videos
       if: ${{ always() && (env.REQUESTS_TESTS == 'true') }}
 
     - name: Merge test results into one
-      run: |
-        ls public
-        npx mochawesome-merge cypress/results/json/*.json > index.json
+      run: npx mochawesome-merge cypress/results/json/*.json > index.json
       if: ${{ always() && ((env.REQUESTS_TESTS == 'true') || (env.TOOL_TESTS == 'true')) }}
 
     - name: Generate HTML report
