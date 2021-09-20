@@ -50,7 +50,7 @@ jobs:
 
     - name: Copy test execution videos 
       run: |
-        cp cypress/videos/* public/videos
+        cp -r cypress/videos/* public/videos
       if: ${{ always() && (env.REQUESTS_TESTS == 'true') }}
 
     - name: Merge test results into one
